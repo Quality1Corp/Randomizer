@@ -11,7 +11,7 @@
         <!--Random Number-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="999.06976744186045" y="3.218884120171674"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="EkI-w6-xHg">
             <objects>
-                <viewController id="6vP-W3-6I8" sceneMemberID="viewController">
+                <viewController id="6vP-W3-6I8" customClass="SettingViewController" customModule="RandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FaQ-G8-XAN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,6 +126,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="Sft-35-j4w" kind="unwind" unwindAction="unwindFor:" id="ZJR-Zh-pmV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmu-lj-16n">
                                         <rect key="frame" x="0.0" y="56" width="91" height="48"/>
@@ -134,6 +137,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButton" destination="6vP-W3-6I8" eventType="touchUpInside" id="LgT-vZ-2AT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -148,10 +154,15 @@
                             <constraint firstItem="k5t-wK-IZV" firstAttribute="leading" secondItem="fy4-H9-iOx" secondAttribute="leading" constant="40" id="fOB-AI-cwr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="maximumValueTF" destination="9tb-ke-J1d" id="d4L-k5-zcV"/>
+                        <outlet property="minimumValueTF" destination="43F-Uo-uFF" id="rRh-uc-VYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBr-rm-d7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Sft-35-j4w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1789" y="3"/>
+            <point key="canvasLocation" x="1787" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cbz-jW-vZw">
@@ -169,7 +180,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhX-96-K0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="3"/>
+            <point key="canvasLocation" x="223" y="3"/>
         </scene>
     </scenes>
     <resources>
