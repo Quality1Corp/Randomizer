@@ -13,6 +13,7 @@
 		6626841D29D99FD4008AC7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6626841B29D99FD4008AC7B6 /* Main.storyboard */; };
 		6626841F29D99FD5008AC7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6626841E29D99FD5008AC7B6 /* Assets.xcassets */; };
 		6626842229D99FD5008AC7B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6626842029D99FD5008AC7B6 /* LaunchScreen.storyboard */; };
+		662B369329E589F700AF4CE3 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B369229E589F700AF4CE3 /* RandomNumber.swift */; };
 		666F2E1D29D9BCD600EECE7F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F2E1C29D9BCD600EECE7F /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		6626841E29D99FD5008AC7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6626842129D99FD5008AC7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6626842329D99FD5008AC7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662B369229E589F700AF4CE3 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		666F2E1C29D9BCD600EECE7F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,16 +60,57 @@
 		6626841429D99FD4008AC7B6 /* RandomizerApp */ = {
 			isa = PBXGroup;
 			children = (
-				6626841529D99FD4008AC7B6 /* AppDelegate.swift */,
-				6626841729D99FD4008AC7B6 /* SceneDelegate.swift */,
-				6626841929D99FD4008AC7B6 /* MainViewController.swift */,
-				666F2E1C29D9BCD600EECE7F /* SettingViewController.swift */,
-				6626841B29D99FD4008AC7B6 /* Main.storyboard */,
-				6626841E29D99FD5008AC7B6 /* Assets.xcassets */,
-				6626842029D99FD5008AC7B6 /* LaunchScreen.storyboard */,
-				6626842329D99FD5008AC7B6 /* Info.plist */,
+				662B369429E58A8100AF4CE3 /* App */,
+				662B369129E589E500AF4CE3 /* Models */,
+				662B369729E58AE200AF4CE3 /* ViewControllers */,
+				662B369629E58AD100AF4CE3 /* Storyboards */,
+				662B369529E58AA700AF4CE3 /* Resources */,
 			);
 			path = RandomizerApp;
+			sourceTree = "<group>";
+		};
+		662B369129E589E500AF4CE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				662B369229E589F700AF4CE3 /* RandomNumber.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		662B369429E58A8100AF4CE3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6626841529D99FD4008AC7B6 /* AppDelegate.swift */,
+				6626841729D99FD4008AC7B6 /* SceneDelegate.swift */,
+				6626842329D99FD5008AC7B6 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		662B369529E58AA700AF4CE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6626841E29D99FD5008AC7B6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		662B369629E58AD100AF4CE3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6626841B29D99FD4008AC7B6 /* Main.storyboard */,
+				6626842029D99FD5008AC7B6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		662B369729E58AE200AF4CE3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6626841929D99FD4008AC7B6 /* MainViewController.swift */,
+				666F2E1C29D9BCD600EECE7F /* SettingViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,7 @@
 			files = (
 				6626841A29D99FD4008AC7B6 /* MainViewController.swift in Sources */,
 				6626841629D99FD4008AC7B6 /* AppDelegate.swift in Sources */,
+				662B369329E589F700AF4CE3 /* RandomNumber.swift in Sources */,
 				6626841829D99FD4008AC7B6 /* SceneDelegate.swift in Sources */,
 				666F2E1D29D9BCD600EECE7F /* SettingViewController.swift in Sources */,
 			);
@@ -292,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomizerApp/Info.plist;
+				INFOPLIST_FILE = RandomizerApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomizerApp/Info.plist;
+				INFOPLIST_FILE = RandomizerApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

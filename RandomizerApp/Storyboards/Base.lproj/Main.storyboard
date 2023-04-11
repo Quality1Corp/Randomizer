@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QPk-mn-KyJ">
-                                <rect key="frame" x="16" y="132.5" width="288" height="48"/>
+                                <rect key="frame" x="16" y="137.5" width="288" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-WJ-Zfm">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="48"/>
@@ -73,14 +73,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Luf-px-kkY" secondAttribute="trailing" constant="40" id="Iw4-jx-ev1"/>
                             <constraint firstItem="XDs-2l-ahN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axM-MG-37X"/>
                             <constraint firstItem="QPk-mn-KyJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fxq-ze-SO5"/>
-                            <constraint firstItem="QPk-mn-KyJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jWr-qC-OXW"/>
+                            <constraint firstItem="QPk-mn-KyJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="jWr-qC-OXW"/>
                             <constraint firstItem="XDs-2l-ahN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uIx-AB-80O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Number" id="mHc-Kv-iR7">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="AVP-lW-hbw">
                             <connections>
-                                <segue destination="6vP-W3-6I8" kind="presentation" id="2Iy-kH-PEI"/>
+                                <segue destination="OFw-l7-WxU" kind="presentation" id="2Iy-kH-PEI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-wK-IZV">
-                                <rect key="frame" x="40" y="40" width="240" height="103"/>
+                                <rect key="frame" x="40" y="96" width="240" height="103"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43F-Uo-uFF">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
@@ -118,51 +118,36 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-os-f3N">
-                                <rect key="frame" x="114.5" y="222" width="91" height="104"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5b-m7-5Ri">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <segue destination="Sft-35-j4w" kind="unwind" unwindAction="unwindFor:" id="ZJR-Zh-pmV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmu-lj-16n">
-                                        <rect key="frame" x="0.0" y="56" width="91" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelButton" destination="6vP-W3-6I8" eventType="touchUpInside" id="LgT-vZ-2AT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fy4-H9-iOx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="k5t-wK-IZV" firstAttribute="top" secondItem="fy4-H9-iOx" secondAttribute="top" constant="40" id="Gxf-fx-iql"/>
-                            <constraint firstItem="sP5-os-f3N" firstAttribute="centerY" secondItem="FaQ-G8-XAN" secondAttribute="centerY" id="JYh-Wp-a6P"/>
                             <constraint firstItem="fy4-H9-iOx" firstAttribute="trailing" secondItem="k5t-wK-IZV" secondAttribute="trailing" constant="40" id="KdJ-La-us7"/>
-                            <constraint firstItem="sP5-os-f3N" firstAttribute="centerX" secondItem="FaQ-G8-XAN" secondAttribute="centerX" id="TWa-fb-757"/>
                             <constraint firstItem="k5t-wK-IZV" firstAttribute="leading" secondItem="fy4-H9-iOx" secondAttribute="leading" constant="40" id="fOB-AI-cwr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="niO-5p-Fdh">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bsm-5f-zcn">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="cancelButton" destination="6vP-W3-6I8" id="4fb-Vx-iYf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="yzb-Cc-3Un">
+                            <connections>
+                                <action selector="saveButton" destination="6vP-W3-6I8" id="xCM-Ls-mTC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="maximumValueTF" destination="9tb-ke-J1d" id="d4L-k5-zcV"/>
                         <outlet property="minimumValueTF" destination="43F-Uo-uFF" id="rRh-uc-VYQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBr-rm-d7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Sft-35-j4w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="3"/>
+            <point key="canvasLocation" x="2526" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cbz-jW-vZw">
@@ -181,6 +166,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhX-96-K0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uDg-1a-hdf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OFw-l7-WxU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8qo-xH-Pvh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6vP-W3-6I8" kind="relationship" relationship="rootViewController" id="PII-AY-z8I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4J-HM-kbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="2"/>
         </scene>
     </scenes>
     <resources>
